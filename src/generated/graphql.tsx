@@ -743,7 +743,7 @@ export type LaunchesInfoQuery = (
   { __typename?: 'Query' }
   & { launches?: Maybe<Array<Maybe<(
     { __typename?: 'Launch' }
-    & Pick<Launch, 'mission_name' | 'mission_id' | 'launch_year' | 'launch_success'>
+    & Pick<Launch, 'flight_number' | 'mission_name' | 'launch_year'>
   )>>> }
 );
 
@@ -774,10 +774,9 @@ export type LaunchProfileQuery = (
 export const LaunchesInfoDocument = gql`
     query launchesInfo {
   launches {
+    flight_number
     mission_name
-    mission_id
     launch_year
-    launch_success
   }
 }
     `;

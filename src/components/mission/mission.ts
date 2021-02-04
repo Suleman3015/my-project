@@ -4,10 +4,9 @@ import gql from 'graphql-tag'
 export const LaunchesInfo = gql`
 query launchesInfo{
     launches {
+      flight_number
       mission_name
-      mission_id
       launch_year
-      launch_success
     }
   }
 `   
